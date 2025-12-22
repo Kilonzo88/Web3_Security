@@ -1,4 +1,3 @@
-
 # Web3 Security Audit Guide
 
 A comprehensive guide documenting professional smart contract security audit methodology and workflows. This repository serves as both a personal learning reference and a demonstration of structured audit processes for potential clients.
@@ -65,7 +64,7 @@ The primary security assessment of the protocol.
 
 #### **1a. Scoping**
 
-**Objective**: To define the audit boundaries and requirements
+**Objective**: Define the audit boundaries and requirements
 
 **Actions**:
 1. Client completes [MinimalSecurityReviewOnboarding.md](./MinimalSecurityReviewOnboarding.md)
@@ -359,8 +358,23 @@ _[Add your license information here]_
 
 For audit inquiries or questions about this methodology:
 
-_[Add your contact information or link to professional profile]_
+📧 Email: [dennis.m.kilonzo3@gmail.com](mailto:dennis.m.kilonzo3@gmail.com)
 
 ---
 
-**Note** This is a living document that evolves with each audit and learning milestone.
+## 📊 Progress Tracker
+
+This repository is continuously updated as new audit techniques and knowledge are acquired. Key areas under development:
+
+- [ ] Expand tool integration documentation
+- [ ] Add specific reconnaissance techniques
+- [ ] Document vulnerability patterns and examples
+- [ ] Create checklist for each audit phase
+- [ ] Add case studies from completed audits
+- [ ] Expand automated testing strategies
+
+---
+
+**Last Updated**: December 2024
+
+**Note**: This is a living document that evolves with each audit and learning milestone.
