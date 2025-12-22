@@ -1,4 +1,4 @@
-# Web3 Security Audit Guide
+# 🔒 Web3 Security Audit Guide
 
 A comprehensive guide documenting professional smart contract security audit methodology and workflows. This repository serves as both a personal learning reference and a demonstration of structured audit processes for potential clients.
 
