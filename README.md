@@ -201,13 +201,13 @@ The primary security assessment of the protocol.
 **Actions**:
 
 #### **2a. Protocol Fixes Issues**
-- Protocol team implements fixes based on audit findings
-- Team may request clarifications on findings
+- Fixes implemented based on audit findings
+- Clarification request on findings
 - Provide guidance on remediation approaches (if requested)
 
 #### **2b. Protocol Retests and Adds Tests**
-- Protocol team writes tests for fixed vulnerabilities
-- Team verifies issues are resolved
+- Tests are written for fixed vulnerabilities
+- Verification of issues resolved
 - Additional test coverage implemented
 - Updated codebase prepared for mitigation review
 
