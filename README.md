@@ -38,7 +38,7 @@ Web3_Security/
 ├── src/                                    # Discovered vulnerabilities and examples
 ├── lib/                                    # Dependencies and libraries
 ├── .github/workflows/                      # CI/CD configurations
-├── MinimalSecurityReviewOnboarding.md     # Client questionnaire (STEP 1)
+├── MinimalSecurityReviewOnboarding.md     # Client questionnaire 
 ├── extensive-onboarding-questions.md      # Detailed scoping questions
 ├── AuditReportTemplate.md                 # Standard audit report format
 ├── Vulnerability.md                       # Detailed vulnerability documentation
