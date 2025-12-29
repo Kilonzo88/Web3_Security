@@ -12,6 +12,7 @@ A comprehensive guide documenting professional smart contract security audit met
   - [Phase 1: Initial Review](#phase-1-initial-review)
   - [Phase 2: Protocol Fixes](#phase-2-protocol-fixes)
   - [Phase 3: Mitigation Review](#phase-3-mitigation-review)
+  - [Phase 4: Reporting](#phase-4-TBA)
 - [Getting Started](#getting-started)
 - [Tools & Frameworks](#tools--frameworks)
 - [Resources](#resources)
