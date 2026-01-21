@@ -35,25 +35,60 @@ This repository documents a systematic approach to conducting smart contract sec
 ## 📁 Repository Structure
 
 ```
-Web3_Security/
-├── src/                                    # Discovered vulnerabilities and examples
+web3_security/
+├── audit-templates/                        # Audit workflow documentation
+│   ├── AuditReportTemplate.md             # Standard audit report format
+│   ├── MinimalSecurityReviewOnboarding.md # Client questionnaire
+│   ├── extensive-onboarding-questions.md  # Detailed scoping questions
+│   └── findings_layout.md                 # Findings documentation template
+│
+├── vulnerabilities/                        # Educational vulnerability examples
+│   ├── reentrancy/                        # Reentrancy attack variants
+│   │   ├── README.md                      # Category overview
+│   │   ├── single-function/               # Classic reentrancy
+│   │   ├── cross-function/                # Cross-function reentrancy
+│   │   ├── cross-contract/                # Cross-contract reentrancy
+│   │   ├── cross-chain/                   # Cross-chain reentrancy
+│   │   ├── read-only/                     # Read-only reentrancy
+│   │   └── cei-violation/                 # CEI pattern violations
+│   │
+│   ├── dos/                               # Denial of Service attacks
+│   │   ├── README.md                      # Category overview
+│   │   ├── for-loops/                     # Unbounded loop DoS
+│   │   ├── selfdestruct/                  # Self-destruct DoS
+│   │   └── native-transfer/               # Transfer failure DoS
+│   │
+│   ├── access-control/                    # Access control issues
+│   │   ├── README.md                      # Category overview
+│   │   └── missing-access-control/        # Unprotected functions
+│   │
+│   ├── arithmetic/                        # Arithmetic vulnerabilities
+│   │   ├── README.md                      # Category overview
+│   │   └── overflow-underflow/            # Integer overflow/underflow
+│   │
+│   ├── randomness/                        # Randomness issues
+│   │   ├── README.md                      # Category overview
+│   │   └── weak-randomness/               # Weak random sources
+│   │
+│   └── token-issues/                      # Token-related vulnerabilities
+│       ├── README.md                      # Category overview
+│       └── weird-erc20/                   # Non-standard ERC-20 behaviors
+│
 ├── lib/                                    # Dependencies and libraries
+├── test/                                   # Test files
+├── script/                                 # Deployment scripts
 ├── .github/workflows/                      # CI/CD configurations
-├── MinimalSecurityReviewOnboarding.md     # Client questionnaire 
-├── extensive-onboarding-questions.md      # Detailed scoping questions
-├── AuditReportTemplate.md                 # Standard audit report format
-├── Vulnerability.md                       # Detailed vulnerability documentation
 ├── foundry.toml                           # Foundry configuration
 ├── README.md                              # This file
 └── rektTest.png                           # Testing artifacts
 ```
 
-### Key Files:
+### Key Directories:
 
-- **MinimalSecurityReviewOnboarding.md**: First step for any audit - clients fill this questionnaire to provide essential project information
-- **AuditReportTemplate.md**: Standardized template for delivering professional audit reports
-- **Vulnerability.md**: Documentation of identified vulnerabilities during audits
-- **src/**: Contains smart contract examples of vulnerabilities discovered during security reviews
+- **audit-templates/**: Professional audit workflow documents including client questionnaires and report templates
+- **vulnerabilities/**: Category-organized smart contract vulnerabilities with examples and explanations
+  - Each category has a README.md overview
+  - Each vulnerability has its own directory with README.md explanation and Solidity examples
 
 ---
 
@@ -68,7 +103,7 @@ The primary security assessment of the protocol.
 **Objective**: Define the audit boundaries and requirements
 
 **Actions**:
-1. Client completes [MinimalSecurityReviewOnboarding.md](./MinimalSecurityReviewOnboarding.md)
+1. Client completes [MinimalSecurityReviewOnboarding.md](./audit-templates/MinimalSecurityReviewOnboarding.md)
 2. Review provided documentation:
    - Whitepaper/technical documentation
    - Previous audit reports (if any)
@@ -166,7 +201,7 @@ The primary security assessment of the protocol.
 
 **Deliverables**: 
 - Vulnerability list with severity ratings
-- Proof-of-concept code (stored in `src/`)
+- Proof-of-concept code (stored in `vulnerabilities/`)
 - Detailed findings documentation
 
 ---
@@ -176,7 +211,7 @@ The primary security assessment of the protocol.
 **Objective**: Deliver clear, actionable security findings to the client
 
 **Actions**:
-1. Compile findings using [AuditReportTemplate.md](./AuditReportTemplate.md)
+1. Compile findings using [AuditReportTemplate.md](./audit-templates/AuditReportTemplate.md)
 2. Write detailed vulnerability descriptions
 3. Include reproduction steps and PoC code
 4. Provide remediation recommendations
@@ -299,7 +334,7 @@ The primary security assessment of the protocol.
    ```
 
 4. For a new audit, start with the client questionnaire:
-   - Send [MinimalSecurityReviewOnboarding.md](./MinimalSecurityReviewOnboarding.md) to the client
+   - Send [MinimalSecurityReviewOnboarding.md](./audit-templates/MinimalSecurityReviewOnboarding.md) to the client
    - Review their responses
    - Begin Phase 1: Initial Review
 
@@ -337,9 +372,14 @@ _This section will be populated with useful resources as they are discovered:_
 
 ### Reference Materials
 
-- [Vulnerability.md](./Vulnerability.md) - Documented vulnerabilities from past audits
-- [AuditReportTemplate.md](./AuditReportTemplate.md) - Standard report format
-- [MinimalSecurityReviewOnboarding.md](./MinimalSecurityReviewOnboarding.md) - Client intake form
+- [Audit Templates](./audit-templates/) - Professional audit workflow documents
+- [Vulnerabilities](./vulnerabilities/) - Category-organized vulnerability examples
+  - [Reentrancy](./vulnerabilities/reentrancy/) - All reentrancy attack variants
+  - [DoS Attacks](./vulnerabilities/dos/) - Denial of Service patterns
+  - [Access Control](./vulnerabilities/access-control/) - Authorization issues
+  - [Arithmetic](./vulnerabilities/arithmetic/) - Integer overflow/underflow
+  - [Randomness](./vulnerabilities/randomness/) - Weak randomness sources
+  - [Token Issues](./vulnerabilities/token-issues/) - ERC-20 incompatibilities
 
 ---
 
